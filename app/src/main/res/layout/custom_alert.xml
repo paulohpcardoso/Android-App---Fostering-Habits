@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:text="Add New Habit" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textColor="#fff"
+        android:hint="Habit Title" />
+
+    <EditText
+        android:id="@+id/goal"
+        android:layout_width="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textColor="#fff"
+        android:hint="Goal: # times?"/>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:background="@color/colorPrimaryDark"
+        android:text="Save" />
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "661846534364",
+    "firebase_url": "https://fostering-habits.firebaseio.com",
+    "project_id": "fostering-habits",
+    "storage_bucket": "fostering-habits.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661846534364:android:f21c37d8e263ce72",
+        "android_client_info": {
+          "package_name": "com.example.sophi.fosteringhabits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "661846534364-uc8q65380o2vn81kgnu7387fpe4vvgv4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sophi.fosteringhabits",
+            "certificate_hash": "b1f5ddb26f7949320d142c05b4597a032e0cedd0"
+          }
+        },
+        {
+          "client_id": "661846534364-qd8cnjde0461bt29th22pbu2cic4vmqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNtfrhRWze02KHT3fpNztkTb2e95bLRyk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "661846534364-qd8cnjde0461bt29th22pbu2cic4vmqf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
