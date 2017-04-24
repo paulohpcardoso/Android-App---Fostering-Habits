@@ -8,11 +8,6 @@
         android:title="Add"
         app:showAsAction="ifRoom"/>
 
-    <!-- Settings, should always be in the overflow -->
-    <item android:id="@+id/settings"
-        android:title="Settings"
-        app:showAsAction="never"/>
-
     <item android:id="@+id/action_logout"
         android:title="Log out"
         app:showAsAction="never"/>

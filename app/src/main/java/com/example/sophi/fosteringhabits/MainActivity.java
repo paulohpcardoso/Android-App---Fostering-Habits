@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
+    private static final String TAG = "MainActivity";
     private EditText nameEdit;
     private EditText emailEdit;
     private EditText passwordEdit;
@@ -39,11 +41,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d(TAG, "onCreate");
 
         firebaseAuth = FirebaseAuth.getInstance();
+        //create root's child - Users
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
 
         progressDialog = new ProgressDialog(this);
+
         nameEdit = (EditText)findViewById(R.id.name);
         emailEdit = (EditText)findViewById(R.id.email);
         passwordEdit = (EditText)findViewById(R.id.password);
@@ -103,11 +108,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                         if(task.isSuccessful()){
                             //user is successfully registered and logged in
                             //we will start the profile activity here
-                            Toast.makeText(MainActivity.this, "Registered Successfully.", Toast.LENGTH_SHORT).show();
+
+                            //get current user's id[8
                             String userid = firebaseAuth.getCurrentUser().getUid();
+
                             DatabaseReference current_user_db = mDatabase.child(userid);
                             current_user_db.child("name").setValue(name);
 
+                           // close progress dialog
                             progressDialog.dismiss();
 
                             Intent intent = new Intent(MainActivity.this, HabitsActivity.class);
@@ -129,4 +137,35 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy");
+    }
+
 }

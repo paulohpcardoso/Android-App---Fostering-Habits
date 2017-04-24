@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:textColor="#fff"
-        android:hint="Habit Title" />
+        android:hint="Title"
+        android:textColorHint="#fff"/>
 
     <EditText
         android:id="@+id/goal"
@@ -31,7 +32,8 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:textColor="#fff"
-        android:hint="Goal: # times?"/>
+        android:hint="Goal: how many times?"
+        android:textColorHint="#fff"/>
 
     <Button
         android:id="@+id/save"
